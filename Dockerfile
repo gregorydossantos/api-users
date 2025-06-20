@@ -9,6 +9,6 @@ RUN mvn clean install
 
 FROM openjdk:17-jdk-slim
 EXPOSE 8081
-COPY --from=build /target/api-users-1.jar users.jar
+COPY --from=build /target/api-users-1.jar api-users.jar
 
-ENTRYPOINT ["java", "-jar", "users.jar"]
+ENTRYPOINT ["java", "-jar", "api-users.jar"]
